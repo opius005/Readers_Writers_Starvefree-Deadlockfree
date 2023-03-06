@@ -1,0 +1,36 @@
+int r_count=0;
+
+Semaphore mutex=1;
+Semaphore r_s=1;
+Semaphore w_s=1;
+
+void reader(void) {
+    while (1) {
+        wait(mutex);
+        wait(r_s);
+        r_count++;
+        signal(r_s);
+        if(r_count==1) wait(w_s);
+        signal(mutex);
+
+        ///reading...
+
+        wait(r_s);
+        r_count--;
+        signal(r_s);
+        if(r_count==0) signal(w_s);
+    }
+}
+
+void writer(void){
+    while (1) {
+        wait(mutex);
+        wait(w_s);
+        
+        ///writing...
+
+        signal(w_s);
+        signal(mutex);
+    }
+}
+
