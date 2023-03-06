@@ -1,7 +1,7 @@
 # Readers_Writers_Starvefree-Deadlockfre
 
-The given solution is a starvefree and deadlockfree solution for readers-writers problem in process syncronisation of operating systems.
-These are the main cases considered for solving the problem:
+<The given solution is a starvefree and deadlockfree solution for readers-writers problem in process syncronisation of operating systems.>
+<These are the main cases considered for solving the problem:>
 -> r + r = allowed
 -> r + w = not allowed
 -> w + r = not allowed
