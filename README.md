@@ -14,7 +14,7 @@ r_s is a binary semaphore to acheive mutual exclusion among readers while modify
 w_s is a binary semaphore to acheive mutual exclusion among writers\
 
 case-1:\
-when a reader enters into critical section for first time, w_s is set to 0 and mutex is changed from 1-0-1 . When another reader comes before any writer comes , he can enter into critical section. When all the active readers are done(r_count=0) then the waiting writers are signelled; \
+when a reader enters into critical section for first time, w_s is set to 0 and mutex is changed from 1-0-1 . When another reader comes before any writer comes , he can enter into critical section. When all the active readers are done(r_count=0) then the waiting writers are signelled\
 case-2:\
 As explained in case-1, w_s is set to 0 . so writer can't enter into critical section and will be waiting\
 case-3 & case-4\
