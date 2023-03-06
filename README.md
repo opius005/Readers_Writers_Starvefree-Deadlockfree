@@ -11,4 +11,4 @@ Following the above cases we can achieve starvation and deadlock free solution.\
 r_count is the number of active readers\
 mutex is a binary semaphore used to achieve mutual exclusion among readers and writers\
 r_s is a binary semaphore to acheive mutual exclusion among readers while modifying r_acount\
-w_s is a binary semaphore to acheive mutual exclusion among writers\
+w_s is a binary semaphore to acheive mutual exclusion among writers
